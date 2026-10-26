@@ -4,6 +4,7 @@ import kz.aitu.navigation.model.Location;
 import kz.aitu.navigation.navigator.Navigator;
 import kz.aitu.navigation.strategy.CarStrategy;
 import kz.aitu.navigation.strategy.CycleStrategy;
+import kz.aitu.navigation.strategy.PublicTransportStrategy;
 import kz.aitu.navigation.strategy.WalkStrategy;
 
 public class Main {
@@ -19,6 +20,9 @@ public class Main {
         printRoute(navigator, baiterek, khanShatyr);
 
         navigator.setStrategy(new CycleStrategy());
+        printRoute(navigator, baiterek, khanShatyr);
+
+        navigator.setStrategy(new PublicTransportStrategy());
         printRoute(navigator, baiterek, khanShatyr);
     }
 
